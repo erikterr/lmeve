@@ -34,13 +34,13 @@ class Assets extends Route {
     
     public function __construct($esi) {
         parent::__construct($esi);
-        $this->setRoute('/v3/corporations/');
+        $this->setRoute('/v5/corporations/');
         $this->setCacheInterval(3600);
         $this->cacheInvFlags();
     }
     
     public function getCorporationAssets() {
-        $this->setRoute('/v3/corporations/');
+        $this->setRoute('/v5/corporations/');
         $this->setCacheInterval(3600);
         $assets = array();
         $assets = $this->get( $this->ESI->getCorporationID() . '/assets/');
